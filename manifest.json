@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Judge.me Review Scraper",
+    "version": "1.0",
+    "description": "Extract all reviews from Judge.me and export to CSV.",
+    "permissions": ["activeTab", "scripting", "downloads"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
